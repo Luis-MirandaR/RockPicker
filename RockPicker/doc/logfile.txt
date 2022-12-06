@@ -1,0 +1,40 @@
+Class documentation
+<---- javadoc command: ---->
+F:\GreenFoot\jdk\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-protected
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+11
+-classpath
+F:\GreenFoot\lib\greenfoot.jar;F:\GreenFoot\lib\bluejcore.jar;F:\GreenFoot\lib\bluejeditor.jar;F:\GreenFoot\lib\bluejext2.jar;F:\GreenFoot\lib\junit-jupiter-5.5.2.jar;F:\GreenFoot\lib\junit-jupiter-api-5.5.2.jar;F:\GreenFoot\lib\junit-jupiter-engine-5.5.2.jar;F:\GreenFoot\lib\junit-jupiter-migrationsupport-5.5.2.jar;F:\GreenFoot\lib\junit-jupiter-params-5.5.2.jar;F:\GreenFoot\lib\junit-platform-commons-1.5.2.jar;F:\GreenFoot\lib\junit-platform-console-1.5.2.jar;F:\GreenFoot\lib\junit-platform-console-standalone-1.5.2.jar;F:\GreenFoot\lib\junit-platform-engine-1.5.2.jar;F:\GreenFoot\lib\junit-platform-launcher-1.5.2.jar;F:\GreenFoot\lib\junit-platform-reporting-1.5.2.jar;F:\GreenFoot\lib\junit-platform-runner-1.5.2.jar;F:\GreenFoot\lib\junit-platform-suite-api-1.5.2.jar;F:\GreenFoot\lib\junit-platform-testkit-1.5.2.jar;F:\GreenFoot\lib\junit-quickcheck-core-0.9.jar;F:\GreenFoot\lib\junit-vintage-engine-5.5.2.jar;F:\GreenFoot\lib\hamcrest-core-1.3.jar;F:\GreenFoot\lib\bluej.jar;F:\GreenFoot\lib\classgraph-4.8.90.jar;F:\GreenFoot\lib\diffutils-1.2.1.jar;F:\GreenFoot\lib\commons-logging-api-1.1.2.jar;F:\GreenFoot\lib\jl1.0.1.jar;F:\GreenFoot\lib\opencsv-2.3.jar;F:\GreenFoot\lib\xom-1.3.7.jar;F:\GreenFoot\lib\lang-stride.jar;F:\GreenFoot\lib\nsmenufx-2.1.8.jar;F:\GreenFoot\lib\wellbehavedfx-0.3.3.jar;F:\GreenFoot\lib\guava-17.0.jar;F:\GreenFoot\lib\httpclient-4.1.1.jar;F:\GreenFoot\lib\httpcore-4.1.jar;F:\GreenFoot\lib\httpmime-4.1.1.jar;F:\GreenFoot\lib\javafx\lib\javafx.base.jar;F:\GreenFoot\lib\javafx\lib\javafx.controls.jar;F:\GreenFoot\lib\javafx\lib\javafx.fxml.jar;F:\GreenFoot\lib\javafx\lib\javafx.graphics.jar;F:\GreenFoot\lib\javafx\lib\javafx.media.jar;F:\GreenFoot\lib\javafx\lib\javafx.properties.jar;F:\GreenFoot\lib\javafx\lib\javafx.swing.jar;F:\GreenFoot\lib\javafx\lib\javafx.web.jar;C:\Users\omega\Desktop\RockPicker
+-d
+C:\Users\omega\Desktop\RockPicker\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+C:\Users\omega\Desktop\RockPicker\GameOver.java
+<---- end of javadoc command ---->
+Loading source file C:\Users\omega\Desktop\RockPicker\GameOver.java...
+Constructing Javadoc information...
+warning: unknown enum constant Tag.Any
+  reason: class file for threadchecker.Tag not found
+warning: unknown enum constant Tag.Any
+Standard Doclet version 11.0.14.1
+Building tree for all the packages and classes...
+Generating C:\Users\omega\Desktop\RockPicker\doc\GameOver.html...
+Generating C:\Users\omega\Desktop\RockPicker\doc\package-summary.html...
+Generating C:\Users\omega\Desktop\RockPicker\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating C:\Users\omega\Desktop\RockPicker\doc\allclasses.html...
+Generating C:\Users\omega\Desktop\RockPicker\doc\allclasses.html...
+Generating C:\Users\omega\Desktop\RockPicker\doc\index.html...
+2 warnings
