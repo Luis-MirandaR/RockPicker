@@ -25,8 +25,8 @@ public class ComoJugar extends World
         Points emerald = new Emerald();
         Points gem = new Gem();
         Enemy alien = new Alien();
-        Enemy asteroid = new Asteroid();
-        Enemy plier = new Plier();
+        Enemy asteroid = new Asteroid(2);
+        Enemy plier = new Plier(1);
         Teclas teclas = new Teclas();
         Sign enemies = new Sign();
         Sign points = new Sign();

@@ -19,10 +19,10 @@ public class Select extends Actor
         if(Greenfoot.isKeyDown("s")){
             if(getY() == 113){
                 setLocation​(170,160);
-                Greenfoot.delay​(10);
+                Greenfoot.delay​(1);
             }else if(getY()== 160){
                 setLocation​(170,212);
-                Greenfoot.delay​(10);
+                Greenfoot.delay​(1);
             }else if(getY()== 212){
                 setLocation​(230,113);
                 Greenfoot.delay​(1);
@@ -31,10 +31,10 @@ public class Select extends Actor
         if(Greenfoot.isKeyDown("w")){
             if(getY() == 113){
                 setLocation​(170,212);
-                Greenfoot.delay​(10);
+                Greenfoot.delay​(1);
             }else if(getY()== 212){
                 setLocation​(170,160);
-                Greenfoot.delay​(10);
+                Greenfoot.delay​(1);
             }else if(getY()== 160){
                 setLocation​(230,113);
                 Greenfoot.delay​(1);

@@ -17,6 +17,7 @@ public class Return extends Button
     int myNewWidth;
     int myNewHeight;
     GreenfootImage myImage = getImage();
+    GreenfootImage Original = getImage();
     public void act()
     {
         MovSelect();
@@ -41,6 +42,9 @@ public class Return extends Button
             if(Greenfoot.isKeyDown("Space") ||Greenfoot.isKeyDown("Enter") ){
                 Greenfoot.setWorld(new Menu());
             }
+        }
+        else{
+            setImage(Original);
         }
     }
 }

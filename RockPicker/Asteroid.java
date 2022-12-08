@@ -8,12 +8,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Asteroid extends Enemy
 {
-    /**
-     * Act - do whatever the Asteroid wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
-        // Add your action code here.
+    private int dir = Greenfoot.getRandomNumber(2);
+    private int speed = 1;
+    public void act(){
+        move(this.speed);
+        reAppear();
+    }
+    Asteroid(int tipo){
+        if(tipo == 1){
+            GreenfootImage myImage = getImage();
+            int myNewHeight = (int)myImage.getHeight()/2;
+            int myNewWidth = (int)myImage.getWidth()/2;
+            myImage.scale(myNewWidth, myNewHeight);
+        }
+        if(dir == 1){
+            turn(180);
+        }
     }
 }

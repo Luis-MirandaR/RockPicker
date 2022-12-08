@@ -6,52 +6,31 @@ public class Player extends Actor
     public void act()
     {
         move();
-        showStatus();
-        getPoints();
         aspect();
-        gameover();
-        touchingWall();
+        Pause();
     }
-    public void increaseScore(int points)
-    {
-        score+=points;
-        showStatus();
-        move();
-    }
-    public void showStatus()
-    {
-        getWorld().showText("Score : " + score, 1100, 50);
-    }
-    public void getPoints()
-    {
-        if(isTouching(Points.class)){
-            int points = 0;
-            if(isTouching(Gem.class)){
-                points = 10;
-            }
-            if(isTouching(Emerald.class)){
-                points = 5;
-            }
-            
-            removeTouching(Points.class);
-            increaseScore(points);
+    public void Pause(){
+        if(Greenfoot.isKeyDown("ESCAPE")){
+            PauseMenu pm = new PauseMenu();
+            getWorld().addObject(pm,600,400);
+            Greenfoot.ask("Pausa");
         }
     }
     public void move(){
-        if(Greenfoot.isKeyDown("W")){
-            mueveteArriba();
+        if(Greenfoot.isKeyDown("A")){
+            mueveteIzquierda();
         }
-        if(Greenfoot.isKeyDown("S")){
-            mueveteAbajo();
+        if(Greenfoot.isKeyDown("D")){
+            mueveteDerecha();
         }
     }
-    public void mueveteArriba()
+    public void mueveteIzquierda()
     {
-        this.setLocation(this.getX(), this.getY() - 5);
+        this.setLocation(this.getX()-5, this.getY());
     }
-    public void mueveteAbajo()
+    public void mueveteDerecha()
     {
-        this.setLocation(this.getX(), this.getY() + 5);
+        this.setLocation(this.getX() +5, this.getY());
     }
     public void aspect(){
         if(score > 10 && score < 50){
@@ -64,16 +43,17 @@ public class Player extends Actor
             setImage("Nave3.png");
         }
     }
-    public void gameover(){
-        if(isTouching(Enemy.class))
-            Greenfoot.setWorld(new GameOver(score));
-    }
     public void touchingWall()
     {
-        Actor wall = getOneIntersectingObject(Border.class);
-            if (wall != null)
+        Actor wall2 = getOneIntersectingObject(Border2.class);
+        Actor wall3 = getOneIntersectingObject(Border3.class);
+            if (wall2 != null)
             {
-                setLocation (getX(),getY()+10);
+                setLocation (getX() + 10,getY());
+            }
+            if (wall3 != null)
+            {
+                setLocation (getX() - 10,getY());
             }
     }
 }
