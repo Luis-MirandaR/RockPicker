@@ -10,6 +10,6 @@ public class Gem extends Points
 {
     public void act()
     {
-        // Add your action code here.
+        getTouched();
     }
 }

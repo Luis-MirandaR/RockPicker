@@ -8,12 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Points extends Actor
 {
-    /**
-     * Act - do whatever the Points wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private final int xLimit = 10;
+    private final int yLimit = 10;
+    private final int blackSpaceUp = 220;
+    
     public void act()
     {
-        // Add your action code here.
+        getTouched();
+    }
+    public void getTouched(){
+        if(isTouching(Garra.class)){
+            setLocation(xLimit + Greenfoot.getRandomNumber(1180), blackSpaceUp + Greenfoot.getRandomNumber(570));
+        }
     }
 }

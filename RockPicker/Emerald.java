@@ -10,6 +10,6 @@ public class Emerald extends Points
 {
     public void act()
     {
-        // Add your action code here.
+        getTouched();
     }
 }

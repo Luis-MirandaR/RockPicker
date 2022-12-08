@@ -23,11 +23,16 @@ public class Garra extends Player
         showStatus();
     }
     public void move(){
-        if(Greenfoot.isKeyDown("A")){
-            mueveteIzquierda();
-        }
-        if(Greenfoot.isKeyDown("D")){
-            mueveteDerecha();
+        if(Greenfoot.isKeyDown("space")== false){
+            this.setLocation(this.getX(),180);
+            if(Greenfoot.isKeyDown("A")){
+                mueveteIzquierda();
+            }
+            if(Greenfoot.isKeyDown("D")){
+                mueveteDerecha();
+            } 
+        }else{
+            mueveteAbajo();
         }
     }
     public void mueveteIzquierda()
@@ -37,6 +42,10 @@ public class Garra extends Player
     public void mueveteDerecha()
     {
         this.setLocation(this.getX() +5, this.getY());
+    }
+    public void mueveteAbajo()
+    {
+        this.setLocation(this.getX(), this.getY()+5);
     }
     
     public void gameover(){
@@ -55,7 +64,6 @@ public class Garra extends Player
                 points = 5;
             }
             
-            removeTouching(Points.class);
             increaseScore(points);
         }
     }

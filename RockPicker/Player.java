@@ -17,11 +17,14 @@ public class Player extends Actor
         }
     }
     public void move(){
-        if(Greenfoot.isKeyDown("A")){
-            mueveteIzquierda();
-        }
-        if(Greenfoot.isKeyDown("D")){
-            mueveteDerecha();
+        if(Greenfoot.isKeyDown("space")== false){
+            this.setLocation(this.getX(),150);
+            if(Greenfoot.isKeyDown("A")){
+                mueveteIzquierda();
+            }
+            if(Greenfoot.isKeyDown("D")){
+                mueveteDerecha();
+            } 
         }
     }
     public void mueveteIzquierda()
