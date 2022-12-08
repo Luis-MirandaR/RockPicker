@@ -7,14 +7,6 @@ public class Player extends Actor
     {
         move();
         aspect();
-        Pause();
-    }
-    public void Pause(){
-        if(Greenfoot.isKeyDown("ESCAPE")){
-            PauseMenu pm = new PauseMenu();
-            getWorld().addObject(pm,600,400);
-            Greenfoot.ask("Pausa");
-        }
     }
     public void move(){
         if(Greenfoot.isKeyDown("space")== false){

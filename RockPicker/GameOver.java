@@ -34,31 +34,28 @@ public class GameOver extends World
     }
     public void isHighScore(){
         HighScoreScene hs = new HighScoreScene();
-        int temporal = actualScore;
-        int temporal2;
-        int flag = 0;
-        String temporalString = null;
-        String temporalString2 = null;
+        int temporal;
+        String tempString;
         
         actualHighScores = hs.getHighScores();
-        for(int i = 0; i < 6; i+=2){
-            if(temporal > Integer.parseInt(actualHighScores[i+1])){
-                if(flag==0){
-                    temporalString = actualHighScores[i];
-                    actualHighScores[i] = Greenfoot.ask("Type your name: ");
-                    
-                    temporal = Integer.parseInt(actualHighScores[i+1]);
-                    actualHighScores[i+1] = Integer.toString(actualScore);
-                    flag = 1;
-                }else{
-                    temporalString2 = actualHighScores[i];
-                    actualHighScores[i] = temporalString;
-                    
-                    temporal2 = Integer.parseInt(actualHighScores[i+1]);
-                    actualHighScores[i+1] = Integer.toString(temporal);
-                    temporal = temporal2;
-                }
-            }
+        if(Integer.parseInt(actualHighScores[1]) < actualScore){
+            actualHighScores[4] = actualHighScores [2];
+            actualHighScores[2] = actualHighScores [0];
+            actualHighScores[0] = Greenfoot.ask("Type your name!: ");
+            
+            actualHighScores[5] = actualHighScores[3];
+            actualHighScores[3] = actualHighScores[1];
+            actualHighScores[1] = Integer.toString(actualScore);
+        }else if(Integer.parseInt(actualHighScores[3]) < actualScore){
+            actualHighScores[4] = actualHighScores [2];
+            actualHighScores[2] = Greenfoot.ask("Type your name!: ");
+            
+            actualHighScores[5] = actualHighScores[3];
+            actualHighScores[3] = Integer.toString(actualScore);
+        }else if(Integer.parseInt(actualHighScores[5]) < actualScore){
+            actualHighScores[4] = Greenfoot.ask("Type your name!: ");
+            
+            actualHighScores[5] = Integer.toString(actualScore);
         }
         writeCSV(actualHighScores);
     }
